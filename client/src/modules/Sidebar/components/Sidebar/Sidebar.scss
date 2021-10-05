@@ -1,0 +1,51 @@
+.sidebar {
+    width: 380px;
+    border-right: 1px solid #D8DAE0;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 114px;
+        background-color: #FDFDFD;
+        border-bottom: 1px solid #D8DAE0;
+
+        &__profil-info {
+            display: flex;
+            justify-content: space-between;
+            height: 49px;
+            width: 200px;
+            padding-left: 18px;
+            padding-right: 18px;
+
+            .avatar {
+                margin-left: 0;
+            }
+
+            &-fullname {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                h2 {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #193130;
+                }
+            }
+        }
+
+        &-notifications {
+            padding-right: 18px;
+
+            button {
+                width: 45px;
+                height: 45px;
+                background-color: #FDFDFD;
+                border-radius: 100%;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

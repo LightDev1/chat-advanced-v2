@@ -1,0 +1,28 @@
+.chat__dialog-header {
+    $self: &;
+    display: flex;
+    justify-content: center;
+    height: 114px;
+    border-bottom: 1px solid #D8DAE0;
+
+    &-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #{$self}-fullname {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #{$self}-status {
+            span {
+                font-size: 14px;
+                color: #616677;
+                text-decoration: underline;
+                opacity: 0.8;
+            }
+        }
+    }
+}

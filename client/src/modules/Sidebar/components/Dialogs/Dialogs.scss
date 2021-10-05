@@ -1,0 +1,53 @@
+.sidebar__dialogs {
+    height: calc(100% - 160px);
+
+    .dialogs {
+        height: 100%;
+        
+        &__search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background-color: #F1F2F4;
+            border-bottom: 1px solid #D8DAE0;
+        
+            .search__dialogs_input {
+                width: 346px;
+                border-radius: 20px;
+                overflow: hidden;
+        
+                .ant-input-wrapper {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-evenly;
+        
+                    input {
+                        outline: none;
+                        margin-left: 28px;
+                        border: none;
+        
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+        
+                    span {
+                        font-size: 18px;
+        
+                        button {
+                            border: none;
+                            padding-left: 10px;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__items {
+            height: 100%;
+            overflow: auto;
+        }
+    }
+}

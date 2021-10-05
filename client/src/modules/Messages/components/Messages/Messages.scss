@@ -1,0 +1,23 @@
+.chat__dialog-messages {
+    width: 99.99%;
+    height: calc(100% - 228px);
+    overflow: auto;
+
+    .messages {
+        padding: 30px;
+        height: 100%;
+
+        &_empty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+

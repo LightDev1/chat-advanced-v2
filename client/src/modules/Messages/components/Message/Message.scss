@@ -1,0 +1,129 @@
+@import '~styles/_variables.scss';
+
+.message {
+    $self: &;
+    display: flex;
+    padding-bottom: 15px;
+
+    &__content {
+        display: flex;
+        max-width: 440px;
+
+        #{$self}__data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .avatar {
+                margin-left: 0;
+                margin-bottom: 12px;
+            }
+
+            #{$self}__time {
+                p {
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #616677;
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        #{$self}__info {
+            margin-left: 13px;
+
+            #{$self}__author {
+                margin-bottom: 8px;
+
+                &__fullname {
+                    font-size: 12px;
+                    color: #616677;
+                    opacity: 0.8;
+                }
+            }
+
+            #{$self}__bubble {
+                background-color: #1786D8;
+                border-radius: 20px;
+                padding: 14px;
+                color: #fff;
+            }
+        }
+
+    }
+
+    &_is-audio {
+        margin-bottom: 20px;
+        #{$self}__bubble {
+           width: 280px;
+           position: relative;
+           overflow: hidden;
+           background: $blue;
+        }
+  
+        #{$self}__audio {
+           position: relative;
+           padding: 15px;
+           background-color: #1786D8;
+           width: 250px;
+           border-radius: 20px;
+           overflow: hidden;
+           
+           audio {
+              display: none;
+           }
+           &-info {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              position: relative;
+           }
+  
+           &-btn {
+             button {
+              cursor: pointer;
+              border: 0;
+              width: 28px;
+              height: 28px;
+              border-radius: 30px;
+              background: #0F3997;
+  
+              img {
+                 height: 13px;
+                 position: relative;
+                 left: 1px;
+              }
+             }
+           }
+  
+           &-duration {
+              color: #fff;
+              font-weight: 500;
+              opacity: 0.5;
+              font-size: 12px;
+           }
+  
+           &-progress {
+              height: 100%;
+              background-color: #418FFF;
+              position: absolute;
+              left: 0;
+              top: 0;
+              transition: width 0.3s ease;
+           }
+        }
+     }
+
+    &_is-me {
+        flex-direction: row-reverse;
+
+        #{$self}__content {
+            flex-direction: column;
+
+            #{$self}__data {
+                align-items: flex-end;
+                margin-top: 10px;
+            }
+        }
+    }
+}

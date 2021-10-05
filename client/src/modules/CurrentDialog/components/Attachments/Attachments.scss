@@ -1,0 +1,14 @@
+.message__attachments {
+    margin-top: 5px;
+    max-width: 440px;
+
+    &-item {
+        overflow: hidden;
+        border-radius: 20px;
+        margin-bottom: 5px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

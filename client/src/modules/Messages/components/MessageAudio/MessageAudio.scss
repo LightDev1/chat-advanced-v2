@@ -1,0 +1,64 @@
+.message {
+    $self: &;
+    display: flex;
+
+    &__content {
+        display: flex;
+        max-width: 440px;
+
+        #{$self}__data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .avatar {
+                margin-left: 0;
+                margin-bottom: 12px;
+            }
+
+            #{$self}__time {
+                p {
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #616677;
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        #{$self}__info {
+            margin-left: 13px;
+
+            #{$self}__author {
+                margin-bottom: 8px;
+
+                &__fullname {
+                    font-size: 12px;
+                    color: #616677;
+                    opacity: 0.8;
+                }
+            }
+
+            #{$self}__bubble {
+                background-color: #1786D8;
+                border-radius: 20px;
+                padding: 14px;
+                color: #fff;
+            }
+        }
+
+    }
+
+    &_is-me {
+        flex-direction: row-reverse;
+
+        #{$self}__content {
+            flex-direction: column;
+
+            #{$self}__data {
+                align-items: flex-end;
+                margin-top: 10px;
+            }
+        }
+    }
+}
