@@ -3,7 +3,7 @@ import validator from 'validator';
 import { differenceInMinutes } from 'date-fns';
 import { generatePasswordHash } from '../utils';
 
-interface UserModelInterface {
+export interface UserModelInterface {
     _id?: string;
     email: string,
     avatar?: string,
