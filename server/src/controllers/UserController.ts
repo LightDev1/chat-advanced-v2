@@ -9,6 +9,22 @@ import { createJWTToken } from '../utils';
 const isValidObjectId = mongoose.Types.ObjectId.isValid;
 
 class UserController {
+    async index(req: express.Request, res: express.Response) {
+        try {
+            const users: UserModelInterface[] = await User.find({}).exec();
+
+            res.json({
+                stasus: 'success',
+                users,
+            });
+        } catch (err) {
+            res.json({
+                stasus: 'error',
+                error: err,
+            });
+        }
+    }
+
     async show(req: express.Request, res: express.Response) {
         try {
             const id: string = req.params.id;
